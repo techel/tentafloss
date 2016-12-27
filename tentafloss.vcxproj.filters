@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="res">
+      <UniqueIdentifier>{7c4d16d8-3d74-46b1-8fd4-af81618dcbfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\states">
+      <UniqueIdentifier>{6f7bc10d-dba0-48d9-9b59-675f7b670672}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\asm">
+      <UniqueIdentifier>{a32c12cd-c0ff-4e58-81f4-21a7081f2c08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\external">
+      <UniqueIdentifier>{2c89fcda-868a-49b9-81dc-6778078b1874}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pad.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ppu.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game.c">
+      <Filter>src\states</Filter>
+    </ClCompile>
+    <ClCompile Include="src\intro.c">
+      <Filter>src\states</Filter>
+    </ClCompile>
+    <ClCompile Include="src\titlescreen.c">
+      <Filter>src\states</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\main.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pad.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ppu.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sound.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game.h">
+      <Filter>src\states</Filter>
+    </ClInclude>
+    <ClInclude Include="src\intro.h">
+      <Filter>src\states</Filter>
+    </ClInclude>
+    <ClInclude Include="src\titlescreen.h">
+      <Filter>src\states</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\init.s">
+      <Filter>src\asm</Filter>
+    </None>
+    <None Include="src\famitone3.s">
+      <Filter>src\external</Filter>
+    </None>
+    <None Include="res\bgmbegin.ftm">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\bgmbegin.s">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\bgmintro.ftm">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\bgmintro.s">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\gfx.bin">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\sfxstart.ftm">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\sfxstart.s">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\sfxtext.ftm">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\sfxtext.s">
+      <Filter>res</Filter>
+    </None>
+    <None Include="nes.cfg" />
+    <None Include="tentafloss.nes" />
+  </ItemGroup>
+</Project>

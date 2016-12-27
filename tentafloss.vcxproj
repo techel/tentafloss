@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{041DF061-E29C-49ED-A695-072683BEF54D}</ProjectGuid>
+    <RootNamespace>tentafloss</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakeBuildCommandLine>makeit &amp;&amp; rmdir /Q /S obj</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>makeit &amp;&amp; rmdir /Q /S obj</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>makeit &amp;&amp; rmdir /Q /S obj</NMakeCleanCommandLine>
+    <OutDir>$(tmp)</OutDir>
+    <IntDir>$(tmp)</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\game.c" />
+    <ClCompile Include="src\intro.c" />
+    <ClCompile Include="src\main.c" />
+    <ClCompile Include="src\pad.c" />
+    <ClCompile Include="src\ppu.c" />
+    <ClCompile Include="src\titlescreen.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\game.h" />
+    <ClInclude Include="src\intro.h" />
+    <ClInclude Include="src\main.h" />
+    <ClInclude Include="src\pad.h" />
+    <ClInclude Include="src\ppu.h" />
+    <ClInclude Include="src\sound.h" />
+    <ClInclude Include="src\titlescreen.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="nes.cfg" />
+    <None Include="res\bgmbegin.ftm" />
+    <None Include="res\bgmbegin.s" />
+    <None Include="res\bgmintro.ftm" />
+    <None Include="res\bgmintro.s" />
+    <None Include="res\gfx.bin" />
+    <None Include="res\sfxstart.ftm" />
+    <None Include="res\sfxstart.s" />
+    <None Include="res\sfxtext.ftm" />
+    <None Include="res\sfxtext.s" />
+    <None Include="src\famitone3.s" />
+    <None Include="src\init.s" />
+    <None Include="tentafloss.nes" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
